@@ -17,9 +17,10 @@ def multiply(x, y):
 def dividiby(x, y):
     return x / y
 
+    
+    
 while True:
-
-    print("\t\tWELCOME TO MATH TUTOR")
+    print("\t\t\nWELCOME TO MATH TUTOR")
     print("addition - subtraction - multiplication - division")
     choice = input("\nEnter your choice from 1 to 4: ")
     if choice in ('1', '2', '3', '4'):
@@ -41,7 +42,7 @@ while True:
                 else:
                     print("Wrong! the correct answer is ", num3)
                     
-            print("Total cores:" + str(scores)+ "/" + str(problem))
+            print("\nTotal cores:" + str(scores)+ "/" + str(problem))
         
         elif choice == '2':
             problem = int(input("How many problems?: "))
@@ -51,7 +52,7 @@ while True:
                 num1 = float(random.randint(0, 9))
                 num2 = float(random.randrange(2, 10, 2))
                 num3 = subtrct(num1, num2)
-                print("What is the difference of " + str(num1) + " and " + str(num2))
+                print("\nWhat is the difference of " + str(num1) + " and " + str(num2))
                 answer = float(input("Enter your answer: "))
                 problemcount = problemcount + 1 
                 if num3 == answer:
@@ -60,7 +61,7 @@ while True:
                 else:
                  print("Wrong! the correct answer is ", num3)
 
-            print("Total Score: " + str(scores) + "/" + str(problem))
+            print("\nTotal Score: " + str(scores) + "/" + str(problem))
         
         elif choice == '3':
             problem = int (input("How many problems?: "))
@@ -70,7 +71,7 @@ while True:
                 num1 = float(random.randint(0, 9))
                 num2 = float(random.randrange(2, 10, 2))
                 num3 = multiply(num1, num2)
-                print("What is the product of " + str(num1) + " and " + str(num2))
+                print("\nWhat is the product of " + str(num1) + " and " + str(num2))
                 answer = float(input("Enter your answer: "))
                 problemcount = problemcount + 1
                 if num3 == answer:
@@ -78,17 +79,17 @@ while True:
                     scores = scores + 1
                 else:
                     print("Wrong! the correct answer is ", num3)
-            print("Total Scores: " + str(scores) + "/" + str(problem))
+            print("\nTotal Scores: " + str(scores) + "/" + str(problem))
         
         elif choice == '4':
             problem = int(input("How many problems?:"))
             problemcount = 0
             scores = 0
-            while(problemcount<problem):
+            while(problemcount < problem):
                 num1 = round(float(random.randint(0, 9)), 2)
                 num2 = round(float(random.randrange(2, 10, 2)), 2)
                 num3 = dividiby(num1, num2)
-                print("What is the quotient of " + str(num1) + " and " + str(num2))
+                print("\nWhat is the quotient of " + str(num1) + " and " + str(num2))
                 answer = float(input("Enter your answer: "))
                 problemcount = problemcount + 1
                 if num3 == answer:
@@ -96,10 +97,10 @@ while True:
                     scores = scores + 1
                 else:
                     print("Wrong! the correct answer is ", num3)
-            print("Total Scores: " + str(scores) + "/" + str(problem))
+            print("\nTotal Scores: " + str(scores) + "/" + str(problem))
 
 
-    try_again = input("Want to try again? (yes/no): ")
+    try_again = input("\nWant to try again? (yes/no): ")
     if try_again == "no":
         break
 
