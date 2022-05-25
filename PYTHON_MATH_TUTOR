@@ -1,4 +1,5 @@
 import random
+from tkinter import W
 
 def add(x, y):
     return x + y
@@ -14,30 +15,47 @@ def dividiby(x, y):
 
 while True:
 
-    choice = input("Enter your choice from 1 to 4: ")
+    print("Welcome to Math Tutor")
+    choice = input("/n/nEnter your choice from 1 to 4: ")
     if choice in ('1', '2', '3', '4'):
 
         if choice == '1':
-            num1 = float(random.randint(0, 9))
-            num2 = float(random.randrange(2, 10, 2))
-            num3 = add(num1, num2)
-            print("What is the sum of " + str(num1) + " and " + str(num2))
-            answer = float(input("Enter your answer: "))
-            if num3 == answer:
-                print("Correct")
-            else:
-                print("Wrong! the correct answer is ", num3)
+            problem = int(input("How many problems?: "))
+            problemcount = 0
+            scores = 0
+            while (problemcount < problem):
+                num1 = float(random.randint(0, 9))
+                num2 = float(random.randrange(2, 10, 2))
+                num3 = add(num1, num2)
+                print("\nWhat is the sum of " + str(num1) + " and " + str(num2))
+                answer = float(input("Enter your answer: "))
+                problemcount = problemcount + 1
+                if num3 == answer:
+                    print("Correct")
+                    scores = scores + 1
+                else:
+                    print("Wrong! the correct answer is ", num3)
+                    
+            print("Total cores:" + str(scores)+ "/" + str(problem))
         
         elif choice == '2':
-            num1 = float(random.randint(0, 9))
-            num2 = float(random.randrange(2, 10, 2))
-            num3 = subtrct(num1, num2)
-            print("What is the difference of " + str(num1) + " and " + str(num2))
-            answer = float(input("Enter your answer: "))
-            if num3 == answer:
-                print("Correct")
-            else:
-                print("Wrong! the correct answer is ", num3)
+            problem = int(input("How many problems?: "))
+            problemcount = 0
+            scores = 0
+            while (problemcount < problem):
+                num1 = float(random.randint(0, 9))
+                num2 = float(random.randrange(2, 10, 2))
+                num3 = subtrct(num1, num2)
+                print("What is the difference of " + str(num1) + " and " + str(num2))
+                answer = float(input("Enter your answer: "))
+                problemcount = problemcount + 1 
+                if num3 == answer:
+                    print("Correct")
+                    scores = scores + 1
+                else:
+                 print("Wrong! the correct answer is ", num3)
+                 
+            print("Total Score: " + str(scores) + "/" + str(problem))
         
         elif choice == '3':
             num1 = float(random.randint(0, 9))
