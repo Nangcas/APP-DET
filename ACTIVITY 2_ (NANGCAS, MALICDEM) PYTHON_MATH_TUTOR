@@ -21,7 +21,7 @@ def dividiby(x, y):
     
 while True:
     print("\t\t\nWELCOME TO MATH TUTOR")
-    print("addition - subtraction - multiplication - division")
+    print("addition (1) - subtraction (2) - multiplication (3) - division (4)")
     choice = input("\nEnter your choice from 1 to 4: ")
     if choice in ('1', '2', '3', '4'):
 
